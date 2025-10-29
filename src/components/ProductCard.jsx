@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function ProductCard({ product }) {
   return (
-    <div className="card">
+    <Link to={`/product/${product.id}`} className="card">
       <img
         src={product.imgUrl}
         alt={`${product.brand} ${product.model}`}
@@ -13,6 +14,6 @@ export default function ProductCard({ product }) {
         <div className="model">{product.model}</div>
         <div className="price">{product.price ? `${product.price}€` : 'Sin precio'}</div>
       </div>
-    </div>
+    </Link>
   )
 }
