@@ -45,6 +45,39 @@ body {
   padding: 16px;
   text-align: center;
 }
+.header-glass {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cart-badge {
+  background: rgba(30,144,255,0.15);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid rgba(30,144,255,0.3);
+}
+
 .info {
   margin-top: 8px;
 }
@@ -112,6 +145,7 @@ body {
   flex: 0 0 60%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
 }
 
@@ -140,8 +174,57 @@ body {
   opacity: 0.8;
   text-align: center;
 }
+/* Actions panel */
+.actions-panel {
+  max-width: 90%;
+  box-sizing: border-box;
+  margin-top: 24px;
+  padding: 20px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.selectors {
+  display: flex;
+  gap: 16px;
+}
+
+.actions-panel select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+}
+
+.add-to-cart-btn {
+  padding: 12px;
+  background: linear-gradient(145deg, #1e90ff, #1c7cd6);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(30,144,255,0.3);
+  cursor: pointer;
+  transition: transform .1s;
+}
+
+.add-to-cart-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.add-to-cart-btn:not(:disabled):active {
+  transform: scale(0.97);
+}
 
 @media (max-width: 768px) {
+  .actions-panel {
+    max-width: 100%;
+  }
   .details-container {
     flex-direction: column;
     padding: 20px;
@@ -153,5 +236,13 @@ body {
 
   .details-info {
     width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .header-glass {
+    padding: 18px;
+  }
+  .logo {
+    font-size: 1.2rem;
   }
 }

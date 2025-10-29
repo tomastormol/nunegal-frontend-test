@@ -18,6 +18,8 @@ Single Page Application (SPA) for browsing and purchasing mobile devices, develo
 ✅ Client-side routing configured  
 ✅ Initial Product Details Page
 
+✅ Added custom hook que escucha tanto storage como cart-updated, por si el usuario abre dos pestañas
+
 ⏳ Upcoming features:
 - Load real product details from API
 - Actions (color / storage selectors)
