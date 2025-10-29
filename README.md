@@ -1,6 +1,6 @@
 # Nunegal Frontend Test - Mobile Shop
 
-Single Page Application (SPA) for browsing and purchasing mobile devices, developed with **React + Vite**.
+Single Page Application (SPA) for browsing and purchasing mobile devices, built with **React + Vite** following a clean, incremental pipeline of commits that reflect a real-world development flow.
 
 ## 🚀 Tech Stack
 
@@ -8,38 +8,44 @@ Single Page Application (SPA) for browsing and purchasing mobile devices, develo
 - Vite
 - React Router
 - Vanilla CSS (no UI frameworks)
+- LocalStorage (client-side persistence)
+
+---
 
 ## 📌 Current Status
 
-✅ Project scaffold with Vite  
-✅ API integration using `.env` configuration  
+✅ Vite + React project scaffold  
+✅ `.env` API configuration  
 ✅ Product Listing Page (PLP) with responsive grid  
-✅ Real-time search
-✅ Client-side routing configured  
-✅ Initial Product Details Page
+✅ Real-time search (brand/model)  
+✅ Routing configured (`/` + `/product/:id`)  
+✅ Product Details Page with dynamic data from API  
+✅ Add-to-cart functionality working  
+✅ Local persistence using `localStorage`  
+✅ Reactive cart counter (syncs across browser tabs via `storage` + custom `cart-updated` event)
 
-✅ Added custom hook que escucha tanto storage como cart-updated, por si el usuario abre dos pestañas
+---
 
-⏳ Upcoming features:
-- Load real product details from API
-- Actions (color / storage selectors)
-- Add to cart functionality
-- Persist cart count across views
-- Client-side caching with 1h expiration
-- Unit tests
+## 🔜 Upcoming Features
+
+- Visual refactor of PLP to match PDP glassmorphism design
+- UI polish and animations
+- Client-side caching layer with TTL (1 hour)
+- Unit tests (Vitest) for services and cart logic
+- Separate styles for each component
 
 ---
 
 ## 🔗 API
 
-Base URL:  
+Base URL (via `.env`):  
 `https://itx-frontend-test.onrender.com/api`
 
-| Endpoint         | Method | Description                   |
-|------------------|--------|-------------------------------|
-| `/product`        | GET    | Retrieves product list         |
-| `/product/:id`    | GET    | Retrieves product details      |
-| `/cart`           | POST   | Adds product to shopping cart  |
+| Endpoint         | Method | Description                  |
+|------------------|--------|------------------------------|
+| `/product`        | GET    | Retrieves product list        |
+| `/product/:id`    | GET    | Retrieves product details     |
+| `/cart`           | POST   | Adds product to shopping cart |
 
 ---
 
@@ -47,4 +53,4 @@ Base URL:
 
 ```bash
 npm install
-npm run dev 
+npm run dev
