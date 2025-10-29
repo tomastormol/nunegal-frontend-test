@@ -5,3 +5,9 @@ export async function fetchProducts() {
   if (!res.ok) throw new Error('Error fetching products')
   return await res.json()
 }
+
+export async function fetchProductById(id) {
+  const res = await fetch(`${BASE_URL}/product/${id}`)
+  if (!res.ok) throw new Error('Error fetching product details')
+  return await res.json()
+}
