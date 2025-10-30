@@ -34,11 +34,10 @@ Single Page Application (SPA) for browsing and purchasing mobile devices, built 
 
 ## 🔜 Upcoming Features
 
-- 
+- sort CSS styles alphabetically
 
 ## Will I have time to do this?
 
-- Refactor
 - Bound effect for Cart
 
 ---
