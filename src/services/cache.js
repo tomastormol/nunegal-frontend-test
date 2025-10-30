@@ -1,27 +1,29 @@
-const CACHE_KEY_PREFIX = 'cache:'
-const CACHE_TTL = 60 * 60 * 1000
-
-export function setCache(key, data) {
+export function setCache(key, data, ttlSeconds = 3600) {
   const record = {
     data,
-    timestamp: Date.now()
-  }
-  localStorage.setItem(CACHE_KEY_PREFIX + key, JSON.stringify(record))
+    expiry: Date.now() + ttlSeconds * 1000,
+  };
+  localStorage.setItem(key, JSON.stringify(record));
 }
 
 export function getCache(key) {
-  const raw = localStorage.getItem(CACHE_KEY_PREFIX + key)
-  if (!raw) return null
+  const item = localStorage.getItem(key);
+  if (!item) return null;
 
   try {
-    const record = JSON.parse(raw)
-    const expired = Date.now() - record.timestamp > CACHE_TTL
-    if (expired) {
-      localStorage.removeItem(CACHE_KEY_PREFIX + key)
-      return null
+    const record = JSON.parse(item);
+
+    if (Date.now() > record.expiry) {
+      localStorage.removeItem(key);
+      return null;
     }
-    return record.data
+
+    return record.data;
   } catch {
-    return null
+    return null;
   }
+}
+
+export function clearCache(key) {
+  localStorage.removeItem(key);
 }

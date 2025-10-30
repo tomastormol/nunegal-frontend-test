@@ -28,12 +28,13 @@ Single Page Application (SPA) for browsing and purchasing mobile devices, built 
 ✅ ProductDetails Skeleton
 ✅ ProductDetails Refactor
 ✅ Separate styles for each component
+✅ Unit tests (Vitest) for cache service, cart and search components
 
 ---
 
 ## 🔜 Upcoming Features
 
-- Unit tests (Vitest) for services and cart logic
+- 
 
 ## Will I have time to do this?
 
