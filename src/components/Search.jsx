@@ -1,12 +1,14 @@
-import React from 'react'
-
 export default function Search({ value, onChange }) {
   return (
-    <input
-      className="search"
-      placeholder="Search products..."
-      value={value}
-      onChange={(e) => onChange(e.target.value)}
-    />
-  )
+    <div className="search-container">
+      <input
+        className="search-input"
+        type="text"
+        placeholder="Search devices..."
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+      />
+      <span className="search-icon">🔍</span>
+    </div>
+  );
 }

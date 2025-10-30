@@ -1,14 +1,14 @@
 # Nunegal Frontend Test - Mobile Shop
 
-Single Page Application (SPA) for browsing and purchasing mobile devices, built with **React + Vite** following a clean, incremental pipeline of commits that reflect a real-world development flow.
+Single Page Application (SPA) for browsing and purchasing mobile devices, built with **React + Vite**
 
 ## 🚀 Tech Stack
 
 - React 19
 - Vite
 - React Router
-- Vanilla CSS (no UI frameworks)
-- LocalStorage (client-side persistence)
+- Vanilla CSS
+- LocalStorage
 
 ---
 
