@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import './ProductCard.css'
+import { Link } from "react-router-dom";
+import "./ProductCard.css";
 
 export default function ProductCard({ product }) {
   return (
@@ -10,13 +10,14 @@ export default function ProductCard({ product }) {
 
       <div className="product-info">
         <div className="product-name">
-          {product.brand} {product.model}
+          <h2>{product.brand}</h2>
+          <h4>{product.model}</h4>
         </div>
 
         <div className="product-price">
-          {product.price ? `${product.price}€` : '—'}
+          {product.price ? `${product.price}€` : "—"}
         </div>
       </div>
     </Link>
-  )
+  );
 }

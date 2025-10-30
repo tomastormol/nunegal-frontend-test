@@ -25,7 +25,7 @@ Single Page Application (SPA) for browsing and purchasing mobile devices, built 
 ✅ Reactive cart counter (syncs across browser tabs via `storage` + custom `cart-updated` event)
 ✅ Breadcrumb
 ✅ Client-side caching layer with TTL (1 hour)
-✅ ProductDetailsSkeleton
+✅ ProductDetails Skeleton
 ✅ ProductDetails Refactor
 ✅ Separate styles for each component
 
