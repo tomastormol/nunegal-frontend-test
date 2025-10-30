@@ -1,31 +1,31 @@
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState } from 'react'
+import { resetCart as resetCartStorage } from '../services/cart'
 
 export function useCart() {
-  const read = () => Number(localStorage.getItem('cart_count') || 0)
-  const [count, setCount] = useState(read())
+  const [count, setCount] = useState(
+    Number(localStorage.getItem('cart_count') || 0)
+  )
 
   useEffect(() => {
-    const onSync = () => {
-      const n = read()
-      if (n !== count) setCount(n)
-    }
-    window.addEventListener('storage', onSync)
-    window.addEventListener('cart-updated', onSync)
+    const update = () => setCount(Number(localStorage.getItem('cart_count') || 0))
+    window.addEventListener('cart-updated', update)
+    window.addEventListener('storage', update)
     return () => {
-      window.removeEventListener('storage', onSync)
-      window.removeEventListener('cart-updated', onSync)
+      window.removeEventListener('cart-updated', update)
+      window.removeEventListener('storage', update)
     }
-  }, [count])
-
-  const addItem = useCallback(() => {
-    const current = read()
-    const next = current + 1
-    localStorage.setItem('cart_count', String(next))
-    setCount(next)
-    setTimeout(() => {
-      window.dispatchEvent(new Event('cart-updated'))
-    }, 0)
   }, [])
 
-  return { count, addItem }
+  const addItem = () => {
+    const newCount = (Number(localStorage.getItem('cart_count') || 0) + 1)
+    localStorage.setItem('cart_count', newCount)
+    window.dispatchEvent(new Event('cart-updated'))
+  }
+
+  const reset = () => {
+    resetCartStorage()
+    setCount(0)
+  }
+
+  return { count, addItem, reset }
 }

@@ -23,3 +23,8 @@ export function subscribeCart(handler) {
     window.removeEventListener('storage', h)
   }
 }
+
+export function resetCart() {
+  localStorage.setItem('cart_count', '0')
+  window.dispatchEvent(new Event('cart-updated'))
+}
