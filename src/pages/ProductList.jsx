@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Header from "../components/Header";
-import ProductGrid from "../components/ProductGrid";
-import Search from "../components/Search";
+import Header from "../components/Header/Header";
+import ProductGrid from "../components/ProductGrid/ProductGrid";
+import Search from "../components/Search/Search";
 import { fetchProducts } from "../services/api";
 import ProductCardSkeleton from "../components/Skeleton/ProductCardSkeleton";
 

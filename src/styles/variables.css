@@ -1,0 +1,9 @@
+:root {
+  --bg: #0b0b0b;
+  --card: #111;
+  --text: #fff;
+
+  --primary: #1e90ff;
+  --primary-glow: rgba(30,144,255,0.15);
+  --primary-border: rgba(30,144,255,0.3);
+}

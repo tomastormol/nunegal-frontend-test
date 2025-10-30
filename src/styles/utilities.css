@@ -1,0 +1,12 @@
+.top-nav-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px 0;
+}
+
+.top-nav-line .back-link {
+  font-size: 14px;
+  opacity: 0.9;
+  color: var(--primary);
+}

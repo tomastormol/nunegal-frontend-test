@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { getCartCount, subscribeCart } from "../services/cart";
-import { useCart } from "../hooks/useCart";
+import { getCartCount, subscribeCart } from "../../services/cart";
+import { useCart } from "../../hooks/useCart";
+import "./Header.css";
 
 export default function Header() {
   const [count, setCount] = useState(getCartCount());

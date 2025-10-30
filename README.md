@@ -26,6 +26,8 @@ Single Page Application (SPA) for browsing and purchasing mobile devices, built 
 ✅ Breadcrumb
 ✅ Client-side caching layer with TTL (1 hour)
 ✅ ProductDetailsSkeleton
+✅ ProductDetails Refactor
+✅ Separate styles for each component
 
 ---
 
@@ -36,7 +38,6 @@ Single Page Application (SPA) for browsing and purchasing mobile devices, built 
 ## Will I have time to do this?
 
 - Refactor
-- Separate styles for each component
 - Bound effect for Cart
 
 ---
