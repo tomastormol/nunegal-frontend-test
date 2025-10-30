@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import { fetchProductById, addToCartApi } from "../services/api";
 import { incrementCart } from "../services/cart";
 import Breadcrumbs from "./Breadcrumbs";
+import ProductDetailsSkeleton from "./Skeleton/ProductDetailsSkeleton";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -53,7 +54,7 @@ export default function ProductDetails() {
         </Link>
       </div>
       <main className="container">
-        {loading && <p>Loading product...</p>}
+        {loading && <ProductDetailsSkeleton />}
         {error && <p style={{ color: "red" }}>Error: {error}</p>}
 
         {!loading && product && (
