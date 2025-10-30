@@ -28,10 +28,13 @@ Single Page Application (SPA) for browsing and purchasing mobile devices, built 
 
 ## 🔜 Upcoming Features
 
-- Visual refactor of PLP to match PDP glassmorphism design
-- UI polish and animations
+- Breadcrumb
 - Client-side caching layer with TTL (1 hour)
 - Unit tests (Vitest) for services and cart logic
+
+## Will I have time to do this?
+
+- Skeleton loading
 - Separate styles for each component
 
 ---
