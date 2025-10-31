@@ -102,6 +102,28 @@
   color: #fff;
   cursor: pointer;
 }
+.selectors {
+  display: flex;
+  gap: 16px;
+}
+
+.selector-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 6px;
+}
+
+.selector-item select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+}
+
 
 /* BUTTON */
 .add-to-cart-btn {

@@ -39,6 +39,7 @@ Single Page Application (SPA) for browsing and purchasing mobile devices, built 
 ## Will I have time to do this?
 
 - Bound effect for Cart
+- { isLoading ? <Skeleton>} change to <Suspense>  fallback={<Loading />} new React feature
 
 ---
 
