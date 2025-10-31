@@ -23,17 +23,11 @@ Single Page Application (SPA) for browsing and purchasing mobile devices, built 
 ✅ Add-to-cart functionality working  
 ✅ Local persistence using `localStorage`  
 ✅ Reactive cart counter (syncs across browser tabs via `storage` + custom `cart-updated` event)
-
 ✅ Breadcrumb
-
 ✅ Client-side caching layer with TTL (1 hour)
-
 ✅ ProductDetails Skeleton
-
 ✅ ProductDetails Refactor
-
 ✅ Separate styles for each component
-
 ✅ Unit tests (Vitest) for cache service, cart and search components
 
 ---
