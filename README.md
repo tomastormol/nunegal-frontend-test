@@ -14,22 +14,21 @@ Single Page Application (SPA) for browsing and purchasing mobile devices, built 
 
 ## 📌 Current Status
 
-✅ Vite + React project scaffold  
-✅ `.env` API configuration  
-✅ Product Listing Page (PLP) with responsive grid  
-✅ Real-time search (brand/model)  
-✅ Routing configured (`/` + `/product/:id`)  
-✅ Product Details Page with dynamic data from API  
-✅ Add-to-cart functionality working  
-✅ Local persistence using `localStorage`  
-✅ Reactive cart counter (syncs across browser tabs via `storage` + custom `cart-updated` event)
-
-✅ Breadcrumb
-✅ Client-side caching layer with TTL (1 hour)
-✅ ProductDetails Skeleton
-✅ ProductDetails Refactor
-✅ Separate styles for each component
-✅ Unit tests (Vitest) for cache service, cart and search components
+- ✅ Vite + React project scaffold  
+- ✅ `.env` API configuration  
+- ✅ Product Listing Page (PLP) with responsive grid  
+- ✅ Real-time search (brand/model)  
+- ✅ Routing configured (`/` + `/product/:id`)  
+- ✅ Product Details Page with dynamic data from API  
+- ✅ Add-to-cart functionality working  
+- ✅ Local persistence using `localStorage`  
+- ✅ Reactive cart counter (syncs across browser tabs via `storage` + custom `cart-updated` event)
+- ✅ Breadcrumb
+- ✅ Client-side caching layer with TTL (1 hour)
+- ✅ ProductDetails Skeleton
+- ✅ ProductDetails Refactor
+- ✅ Separate styles for each component
+- ✅ Unit tests (Vitest) for cache service, cart and search components
 
 ---
 
